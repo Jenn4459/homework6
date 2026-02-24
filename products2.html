@@ -11,11 +11,12 @@
     <div id="result">
         <button type="button">Products</button>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
         $.getJSON("products.json", 
             function(data) {
                 let prod_string = JSON.stringify(data);
-                document.write(prod_string);
+                console.log(prod_string);
             }
         ) //end $GET
     </script>
