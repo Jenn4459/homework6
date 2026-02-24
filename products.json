@@ -1,0 +1,62 @@
+[
+    {
+        "Name": "The Name of the Wind",
+        "Description": "An epic fantasy by Patrick Rothfuss",
+        "Price": 11.99,
+        "Category": ["Books", "Fantasy"]
+    },
+    {
+        "Name": "A Link to the Past",
+        "Description": "the 3rd installment in the Zelda series",
+        "Price": 19.99,
+        "Category": ["Video Games", "2D top-down"] 
+    },
+    {
+        "Name": "In the Mood for Love",
+        "Description": "Wong Kar Wai's Hong Kong romantic drama",
+        "Price": 24.99,
+        "Category": ["Movies", "drama"]
+    },
+    {
+        "Name": "Djesse Volume 4",
+        "Description": "The final volume in Jacob Collier's Jesse",
+        "Price": 14.99,
+        "Category": ["Albums", "Pop"]
+    },
+    {
+        "Name": "A Clash of Kings",
+        "Description": "The second installment in George R. R. Martins, A Song of Fire and Ice",
+        "Price": 9.99,
+        "Category": ["Books", "Dark Fantasy"]
+    },
+    {
+        "Name": "Baldur's Gate III",
+        "Description": "Larian's highly acclaimed DnD RPG",
+        "Price": 70.00,
+        "Category": ["Video Games", "RPG"]
+    },
+    {
+        "Name": "Phantom Thread",
+        "Description": "Paul Thomas Anderson's film about a dress maker and his longtime partner",
+        "Price": 19.99,
+        "Category": ["Movies", "Drama"]
+    },
+    {
+        "Name": "Pantheon",
+        "Description": "Dance Gavin Dance's 2025 album",
+        "Price": 19.99,
+        "Category": ["Albums", "Post-Hardcore"]
+    }, 
+    {
+        "Name": "Berserk Vol. 1",
+        "Description": "Beserk's deluxe edition, volume 1",
+        "Price": 49.99,
+        "Category": ["Manga", "Dark Fantasy"]
+    },
+    {
+        "Name": "Assassin's Apprentice",
+        "Description": "the epic fantasy by Robin Hobb",
+        "Price": 14.99,
+        "Category": ["Books", "Fantasy"]
+    }
+]
