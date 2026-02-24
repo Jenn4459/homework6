@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEADER -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 JSON</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <button type="button" id="filter">Filter</button>
+    <select id="select"></select>
+    <div id="result"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        let categories = [];
+        let jsonObj;
+        const button = document.getElementById("filter");
+        button.onclick = showCategories;
+
+        function getJSON() 
+        {
+            $.getJSON("products.json", 
+            function(data) 
+            {
+                data.forEach(
+                    function(product) 
+                    {
+                        // const print_prod = document.getElementById("result");
+                        // print_prod.innerHTML += 
+                        //     `<h3>${product.Name}</h3>
+                        //         <p>${product.Description}</p>
+                        //         <p>Price: $${product.Price}</p>
+                        //         <p>Category: ${product.Category.join(', ')}</p>
+                        //         <br>
+                        //     `;
+                        product.Category.forEach(
+                            function(data) 
+                            {
+                                categories.push(data);
+                            }
+                        );                  
+                    }
+                )
+                categories.sort();
+                const unique = [...new Set(categories)];
+                const selectElem = document.getElementById("select");
+                unique.forEach(
+                    function(data)
+                    {
+                        selectElem.innerHTML +=
+                            `<option value="${data}" id="${data}">${data}</option>`
+                    }
+                );
+                jsonObj = data;
+            }
+            )
+        }
+        getJSON();
+        function showCategories() 
+        {
+            const print_prod = document.getElementById("result");
+            print_prod.innerHTML = "";
+            let category = document.getElementById("select").value
+            jsonObj.forEach(
+                function(data)
+                {
+                    if (data.Category.includes(category)) {
+                        print_prod.innerHTML += 
+                            `<h3>${data.Name}</h3>
+                                <p>${data.Description}</p>
+                                <p>Price: $${data.Price}</p>
+                                <p>Category: ${data.Category.join(', ')}</p>
+                                <br>
+                            `;
+                }});
+        }
+    </script>
+</body>
+</html>

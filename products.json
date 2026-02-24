@@ -7,7 +7,7 @@
     },
     {
         "Name": "A Link to the Past",
-        "Description": "the 3rd installment in the Zelda series",
+        "Description": "The 3rd installment in the Zelda series",
         "Price": 19.99,
         "Category": ["Video Games", "2D top-down"] 
     },
@@ -15,13 +15,13 @@
         "Name": "In the Mood for Love",
         "Description": "Wong Kar Wai's Hong Kong romantic drama",
         "Price": 24.99,
-        "Category": ["Movies", "drama"]
+        "Category": ["Movies", "Drama"]
     },
     {
         "Name": "Djesse Volume 4",
         "Description": "The final volume in Jacob Collier's Jesse",
         "Price": 14.99,
-        "Category": ["Albums", "Pop"]
+        "Category": ["Albums", "Pop Music"]
     },
     {
         "Name": "A Clash of Kings",
@@ -45,7 +45,7 @@
         "Name": "Pantheon",
         "Description": "Dance Gavin Dance's 2025 album",
         "Price": 19.99,
-        "Category": ["Albums", "Post-Hardcore"]
+        "Category": ["Albums", "Post-Hardcore Music"]
     }, 
     {
         "Name": "Berserk Vol. 1",
@@ -55,7 +55,7 @@
     },
     {
         "Name": "Assassin's Apprentice",
-        "Description": "the epic fantasy by Robin Hobb",
+        "Description": "The epic fantasy by Robin Hobb",
         "Price": 14.99,
         "Category": ["Books", "Fantasy"]
     }
