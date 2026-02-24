@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEADER -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 2 API</title>
+    <link rel="stylesheet" href="api_styles.css">
+</head>
+
+<header>
+    <h1>Breath of the Wild</h1>
+    <p>Compendium</p>
+</header>
+
+<body>
+    <button type="button" id="filter">Categories</button>
+    <select id="select"></select>
+    <div id="result"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+    <!-- JAVASCRIPT START -->
+    <script>
+        let url = "https://botw-compendium.herokuapp.com/api/v3/compendium";
+        let compendium;
+        let categories = [];
+        const button = document.getElementById("filter");
+        button.onclick = showCategories;
+
+        async function getText(url) 
+        {
+            let resObj = await fetch(url);
+            compendium = await resObj.json();
+        }
+
+        async function getInfo()
+        {
+            await getText(url);
+            compendium.data.forEach(
+                function(data) 
+                {
+                    categories.push(data.category);
+                }
+            )
+            categories.sort();
+            const unique = [...new Set(categories)];
+            const selectElem = document.getElementById("select");
+            unique.forEach(
+                function(data)
+                {
+                    selectElem.innerHTML +=
+                        `<option value="${data}" id="${data}">${data}</option>`
+                }
+            );
+        }
+
+        function showCategories() 
+        {
+            const print_prod = document.getElementById("result");
+            print_prod.innerHTML = "";
+            let cat = document.getElementById("select").value
+            compendium.data.forEach(
+                function(data)
+                {
+                    if (data.category.includes(cat)) {
+                        let locations;
+                        let dlc;
+                        let drops = "";
+                        if(data.common_locations === null) {
+                            locations = "Common throughout Hyrule"
+                        } else {
+                            locations = data.common_locations.join(', ');
+                        }
+                        if (data.dlc === true) {
+                            dlc = "This entry is only found in the DLC"
+                        } else {
+                            dlc = "This entry is found in the base game"
+                        }
+                        if (data.drops && data.drops.length !== 0) {
+                            drops = `<p>Drops: ${data.drops}</p>`;
+                        }
+                        print_prod.innerHTML += 
+                            `<h3>${data.name.charAt(0).toUpperCase() + data.name.slice(1)}</h3>
+                                <p>Category: ${data.category}</p>
+                                <p>Common locations: ${locations}</p>
+                                <p>Description: ${data.description}</p>
+                                <p>DLC: ${dlc}</p>
+                                ${drops}
+                                <p>ID: ${data.id}</p>
+                                <image src="https://botw-compendium.herokuapp.com/api/v3/compendium/entry/${data.id}/image"></image>
+                                <br><br>
+                            `;
+                }});
+        }
+        getInfo();
+    </script>
+</body>
+</html>
