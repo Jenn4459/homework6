@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEADER -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1 JSON</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <div id="result">
+        <button type="button">Products</button>
+    </div>
+    <script>
+        $.getJSON("products.json", 
+            function(data) {
+                let prod_string = JSON.stringify(data);
+                document.write(prod_string);
+            }
+        ) //end $GET
+    </script>
+</body>
+</html>
