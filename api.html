@@ -14,8 +14,10 @@
 </header>
 
 <body>
-    <button type="button" id="filter">Categories</button>
-    <select id="select"></select>
+    <div style="text-align: center;">
+        <button type="button" id="filter">Categories</button>
+        <select id="select"></select>
+    </div>
     <div id="result"></div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -81,15 +83,17 @@
                             drops = `<p>Drops: ${data.drops}</p>`;
                         }
                         print_prod.innerHTML += 
-                            `<h3>${data.name.charAt(0).toUpperCase() + data.name.slice(1)}</h3>
-                                <p>Category: ${data.category}</p>
-                                <p>Common locations: ${locations}</p>
-                                <p>Description: ${data.description}</p>
-                                <p>DLC: ${dlc}</p>
-                                ${drops}
-                                <p>ID: ${data.id}</p>
-                                <image src="https://botw-compendium.herokuapp.com/api/v3/compendium/entry/${data.id}/image"></image>
-                                <br><br>
+                            `<div class="box">
+                             <h3>${data.name.charAt(0).toUpperCase() + data.name.slice(1)}</h3>
+                             <p>Category: ${data.category}</p>
+                             <p>Common locations: ${locations}</p>
+                             <p>Description: ${data.description}</p>
+                             <p>DLC: ${dlc}</p>
+                             ${drops}
+                             <p>ID: ${data.id}</p>
+                             <image src="https://botw-compendium.herokuapp.com/api/v3/compendium/entry/${data.id}/image"></image>
+                             <br><br>
+                             </div>
                             `;
                 }});
         }

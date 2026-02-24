@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 4 JSON</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button type="button" id="filter">Filter</button>
-    <select id="select"></select>
+    <div style="text-align: center;">
+        <button type="button" id="filter">Filter</button>
+        <select id="select"></select>
+    </div>
     <div id="result"></div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
@@ -59,11 +61,13 @@
                 {
                     if (data.Category.includes(category)) {
                         print_prod.innerHTML += 
-                            `<h3>${data.Name}</h3>
-                                <p>${data.Description}</p>
-                                <p>Price: $${data.Price}</p>
-                                <p>Category: ${data.Category.join(', ')}</p>
-                                <br>
+                            `<div class="box">
+                             <h3>${data.Name}</h3>
+                             <p>${data.Description}</p>
+                             <p>Price: $${data.Price}</p>
+                             <p>Category: ${data.Category.join(', ')}</p>
+                             <br>
+                             </div>
                             `;
                 }});
         }

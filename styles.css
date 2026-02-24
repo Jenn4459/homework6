@@ -1,16 +1,15 @@
-@font-face {
-    font-family: 'Hylia Serif';
-    src: url('HyliaSerif.otf') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
-    font-family: 'Hylia Serif', serif;
+    font-family: serif;
     text-align: center;
-    background-color: #9ed7e4;
+    background-color: rgb(201, 199, 199);
     padding: 0;
     margin: 0;
+    text-align: center;
+}
+
+#button {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
@@ -36,11 +35,9 @@ h3 {
 }
 
 #result {
-    /* border: 1px solid #28a2a6; */
     width: 75%;
     display:inline-block;
-    margin: 0 0;
-    /* background-color: #28a2a6; */
+    margin: 10px 0 30px 0;
     vertical-align: top;
     box-sizing: border-box;
     position:relative;
@@ -49,8 +46,8 @@ h3 {
     padding: 0 30px 0 30px;
 }
 
-#filter, #select {
-    background-color: #abd384;
+#filter, #select, #button {
+    background-color: #cd6d6d;
     border-radius: 4px;
     border: none;
     color: white;
@@ -63,7 +60,7 @@ h3 {
 }
 
 .box {
-    background-color: #28a2a6;
+    background-color: #9a9aba;
     border-radius: 15px;
     padding: 15px 20px;
     margin: 20px 0;
