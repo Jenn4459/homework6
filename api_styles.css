@@ -38,6 +38,7 @@ h3 {
 .worksheet {
     text-align: center;
     font-size: 15px;
+    font-family: 'georgia';
 }
 
 #result, .worksheet {
@@ -71,6 +72,7 @@ h3 {
     padding: 15px 20px;
     margin: 20px 0;
     box-shadow: 0 2px 4px #000;
+    width: 80%;
 }
 
 .box h3 {
@@ -85,4 +87,29 @@ h3 {
 
 #img {
     width: 75%;
+}
+
+@media screen and (max-width: 400px) {
+    .box, .worksheet {
+        width: 95%;
+        padding: 10px 10px;
+    }
+    
+    .box h3 {
+        font-size: 15px;
+    }
+    
+    .box p {
+        font-size: 12px;
+        line-height: 1;
+    }
+    
+    #img {
+        width: 100%;
+    }
+    
+    #result, .worksheet {
+        width: 95%;
+        padding: 0 10px;
+    }
 }

@@ -27,13 +27,13 @@
         "Name": "A Clash of Kings",
         "Description": "The second installment in George R. R. Martins, A Song of Fire and Ice",
         "Price": 9.99,
-        "Category": ["Books", "Dark Fantasy"]
+        "Category": ["Books", "Dark Fantasy", "Fantasy"]
     },
     {
         "Name": "Baldur's Gate III",
         "Description": "Larian's highly acclaimed DnD RPG",
         "Price": 70.00,
-        "Category": ["Video Games", "RPG"]
+        "Category": ["Video Games", "RPG", "Fantasy"]
     },
     {
         "Name": "Phantom Thread",
@@ -51,7 +51,7 @@
         "Name": "Berserk Vol. 1",
         "Description": "Beserk's deluxe edition, volume 1",
         "Price": 49.99,
-        "Category": ["Manga", "Dark Fantasy"]
+        "Category": ["Manga", "Dark Fantasy", "Fantasy"]
     },
     {
         "Name": "Assassin's Apprentice",

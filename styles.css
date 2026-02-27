@@ -76,3 +76,24 @@ h3 {
     font-size: 16px;
     line-height: 1.5;
 }
+
+@media screen and (max-width: 400px) {
+    .box {
+        width: 95%;
+        padding: 10px 10px;
+    }
+    
+    .box h3 {
+        font-size: 15px;
+    }
+    
+    .box p {
+        font-size: 12px;
+        line-height: 1;
+    }
+    
+    #result {
+        width: 95%;
+        padding: 0 10px;
+    }
+}
