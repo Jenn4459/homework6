@@ -45,18 +45,22 @@
 
     <!-- JAVASCRIPT START -->
     <script>
+        // VARIABLES
         let url = "https://botw-compendium.herokuapp.com/api/v3/compendium";
         let compendium;
         let categories = [];
         const button = document.getElementById("filter");
         button.onclick = showCategories;
 
+        // FUNCTIONS
+        // initial fetch
         async function getText(url) 
         {
             let resObj = await fetch(url);
             compendium = await resObj.json();
         }
 
+        // generating categories
         async function getInfo()
         {
             await getText(url);
@@ -78,6 +82,7 @@
             );
         }
 
+        // shows entries by categories
         function showCategories() 
         {
             document.querySelector('.worksheet').style.display = 'none';
@@ -87,6 +92,8 @@
             compendium.data.forEach(
                 function(data)
                 {
+                    // not all elements of a category are the same, so this unifies
+                    // all cateogories
                     if (data.category.includes(cat)) {
                         let locations;
                         let dlc;
