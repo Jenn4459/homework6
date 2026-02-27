@@ -18,6 +18,25 @@
         <button type="button" id="filter">Categories</button>
         <select id="select"></select>
     </div>
+    <div class="worksheet">
+        <p>
+            I decided to use an API from a video game I love, Breath of the Wild.
+            I chose this API because I wanted to see how niche I could get and I
+            wanted to use something that I had a personal interest in. <br><br>
+            https://gadhagod.github.io/Hyrule-Compendium-API/#/ <br><br>
+            In my code, I did not use any query string parameters. I fetched the 
+            entire data set (/api/v3/compendium) and once I had the data, filtered
+            it and displayed the results accordingly. The API does support 
+            parameters. For example, /category/{category}, but I didn't feel the 
+            need to use this feature. <br><br>
+            An example of where this API would be helpful is building a site for
+            video game guides. I initially picked this API because I love Zelda,
+            and I wanted something a little niche, to see how far an API could 
+            take me, but there are many sites out there that offer game guides 
+            and game info, and this would be very helpful for something like
+            that. <br><br>
+        </p>
+    </div>
     <div id="result"></div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -59,6 +78,7 @@
 
         function showCategories() 
         {
+            document.querySelector('.worksheet').style.display = 'none';
             const print_prod = document.getElementById("result");
             print_prod.innerHTML = "";
             let cat = document.getElementById("select").value
